@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Falhas intencionais: Ausencia de meta charset,viewport e description-->
+    <!-- Falhas intencionais: Ausencia de meta charset, viewport e description-->
     <title>Pagina</title>
 </head>
-<link todo>
+<link rel="stylesheet" href="style.css">
 <body>
     <!--Topo não semântico-->
     <div class="topo">
@@ -15,15 +15,71 @@
             <div class="link-item" onclick="alert('indo para as curiosidades')">Curiosidades</div>
         </div>
     </div>
+
     <!-- Bloco para a versão 2 otimizada TODO-->
-     <div class="corpo-pagina">
+    <div class="corpo-pagina">
         <!--Bloco com conteudo principal-->
         <div class="conteudo-principal">
             <div class="post-perfil">
-                <div class="titulo-post">Olá, eu sou o Jean Bertrand!</div>
-                <div class="subtitulo-autor">Publicado em 27/08/2026 por Jean</div>
+                <div class="titulo-post">Olá, eu sou o Rafael Silva!</div>
+                <div class="subtitulo-autor">Publicado em 27/08/2026 por Rafael Silva</div>
+
+                <!-- Imagem sem alt: falha de acessibilidade intencional -->
+                <img src="perfil.jpg" class="foto-perfil">
+
+                <div class="titulo-secao">Sobre mim</div>
+                <div class="texto">
+                    Sou estudante universitário e apaixonado por ciência da computação,
+                    especialmente por estruturas de dados e algoritmos. Neste blog compartilho
+                    um pouco da minha trajetória, curiosidades da área e reflexões do dia a dia
+                    como docente.
+                </div>
+
+                <div class="titulo-secao">Trajetória</div>
+                <div class="texto">
+                    Minha jornada começou na graduação em Ciência da Computação, passou pela
+                    pós-graduação e hoje me dedico ao ensino e à pesquisa. Ao longo do caminho,
+                    encontrei desafios que me moldaram como profissional e como pessoa.
+                </div>
+
+                <div class="titulo-secao">Curiosidades</div>
+                <div class="texto">
+                    Nas horas vagas, gosto de leitura, música e caminhadas ao ar livre. Também
+                    acompanho novidades de tecnologia, especialmente em inteligência artificial
+                    e boas práticas de desenvolvimento web.
+                </div>
+
+                <!-- Botão feito com div: sem foco de teclado nem role/aria -->
+                <div class="botao-interativo" id="btn-mensagem">Mostrar mensagem</div>
+                <div id="mensagem-secreta" class="texto" style="display:none; margin-top:15px;">
+                    Obrigado por visitar meu blog! Volte sempre.
+                </div>
             </div>
         </div>
-     </div>
+
+        <!--Barra lateral não semântica-->
+        <div class="barra-lateral">
+            <div class="titulo-secao">Últimos posts</div>
+            <div class="texto">
+                <div class="link-item" onclick="alert('post 1')">Primeiro dia de aula</div>
+                <div class="link-item" onclick="alert('post 2')">Dijkstra na prática</div>
+                <div class="link-item" onclick="alert('post 3')">Dicas de estudo</div>
+            </div>
+
+            <div class="titulo-secao">Redes sociais</div>
+            <div class="texto">
+                <div class="link-item" onclick="alert('github')">GitHub</div>
+                <div class="link-item" onclick="alert('linkedin')">LinkedIn</div>
+                <div class="link-item" onclick="alert('email')">E-mail</div>
+            </div>
+        </div>
+    </div>
+
+    <!--Rodapé não semântico-->
+    <div class="rodape">
+        <div>© 2026 Meu Blog Pessoal - Todos os direitos reservados</div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
